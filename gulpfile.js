@@ -20,21 +20,21 @@ gulp.task('html', function () {
 
 // Работа с CSS
 gulp.task('css', function () {
-  gulp.src('./app/*.css')
+  gulp.src('./app/css/*.css')
     .pipe(connect.reload());
 });
 
 // Работа с JS
 gulp.task('js', function () {
-  gulp.src('./app/*.js')
+  gulp.src('./app/js/*.js')
     .pipe(connect.reload());
 });
 
 // Слежка
 gulp.task('watch', function () {
   gulp.watch(['./app/*.html'], ['html']);
-  gulp.watch(['./app/*.css'], ['css']);
-  gulp.watch(['./app/*.js'], ['js']);
+  gulp.watch(['./app/css/*.css'], ['css']);
+  gulp.watch(['./app/js/*.js'], ['js']);
 });
 
 // Задача по умолчанию
